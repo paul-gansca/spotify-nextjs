@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
 import { useStoreState } from "easy-peasy";
 import Player from "./player";
 
@@ -10,8 +11,20 @@ const PlayerBar = () => {
       <Flex align="center">
         {activeSong && (
           <Box width="30%" padding="20px" color="white">
-            <Text fontSize="size">{activeSong.name}</Text>
-            <Text fontSize="small">{activeSong.artist.name}</Text>
+            <Flex align="center">
+              <Box padding="10px">
+                <Image
+                  boxSize="60px"
+                  boxShadow="2xl"
+                  src={`https://picsum.photos/400?random=${activeSong.id}`}
+                  borderRadius="3px"
+                />
+              </Box>
+              <Box>
+                <Text fontSize="size">{activeSong.name}</Text>
+                <Text fontSize="small">{activeSong.artist.name}</Text>
+              </Box>
+            </Flex>
           </Box>
         )}
         {activeSong && (
