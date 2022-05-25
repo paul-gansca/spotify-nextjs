@@ -84,7 +84,7 @@ const Sidebar = () => {
           </List>
         </Box>
         <Box marginTop="20px">
-          <List spacing={2}>
+          <List marginBottom="10px" spacing={2}>
             {musicMenu.map((menu) => (
               <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                 <LinkBox>

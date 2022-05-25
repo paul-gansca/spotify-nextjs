@@ -10,7 +10,7 @@ const PlayerBar = () => {
     <Box height="100px" width="100vw" bg="gray.900" padding="10px">
       <Flex align="center">
         {activeSong && (
-          <Box width="30%" padding="20px" color="white">
+          <Box width="30%" color="white">
             <Flex align="center">
               <Box padding="10px">
                 <Image
